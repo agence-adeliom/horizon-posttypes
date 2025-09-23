@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace Adeliom\HorizonPostTypes\Console\Commands;
 
 use Adeliom\HorizonPostTypes\Services\HorizonPostTypesService;
+use Adeliom\HorizonTools\PostTypes\AbstractPostType;
+use Adeliom\HorizonTools\Services\ClassService;
+use Adeliom\HorizonTools\Services\CommandService;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use function Laravel\Prompts\search;
@@ -21,7 +24,7 @@ class ImportPostType extends Command
         $shortNames = [];
 
         foreach ($classes as $className) {
-            $blockExtraData = $availablePostTypes[$className];
+            $postTypeExtraData = $availablePostTypes[$className];
 
             $fullNames[$className] = str_replace('Adeliom\\HorizonPostTypes\\PostTypes\\', '', $className);
             $shortNames[$className] = $fullNames[$className];
@@ -32,14 +35,14 @@ class ImportPostType extends Command
             return;
         }
 
-        $blockNames = collect(array_values($shortNames));
+        $postTypeNames = collect(array_values($shortNames));
 
         $namespaceToImport = null;
 
         if (
             $index = search(
                 label: 'Name of post-type to import',
-                options: fn(string $value) => $blockNames
+                options: fn(string $value) => $postTypeNames
                     ->filter(fn($name) => Str::contains($name, $value, ignoreCase: true))
                     ->values()
                     ->all(),
@@ -49,6 +52,68 @@ class ImportPostType extends Command
             $namespaceToImport = array_search($index, $shortNames);
         }
 
-        dd($namespaceToImport);
+        if (null !== $namespaceToImport) {
+            $postTypeExtraData = $availablePostTypes[$namespaceToImport];
+
+            $pathToPostTypeControllerFile = ClassService::getFilePathFromClassName($namespaceToImport);
+
+            if (file_exists($pathToPostTypeControllerFile)) {
+                $shortName = $fullNames[$namespaceToImport];
+
+                $structure = CommandService::getFolderStructure(str_replace('\\', '/', $shortName));
+                $folders = $structure['folders'];
+                $className = $structure['class'];
+
+                $this->createPostTypeControllerFile(
+                    className: $className,
+                    folders: $folders,
+                    pathToPostTypeControllerFile: $pathToPostTypeControllerFile,
+                    structure: $structure,
+                );
+            }
+        }
+    }
+
+    private function createPostTypeControllerFile(
+        string $className,
+        array $folders,
+        string $pathToPostTypeControllerFile,
+        array $structure,
+    ): void {
+        $this->newLine();
+        $this->info('Handling post-type controller...');
+
+        $postTypeClassContent = file_get_contents($pathToPostTypeControllerFile);
+        $postTypeClassContent = str_replace('Adeliom\\HorizonPostTypes\\PostTypes\\', 'App\\PostTypes\\', $postTypeClassContent);
+        $postTypeClassContent = str_replace(
+            'namespace Adeliom\\HorizonPostTypes\\PostTypes',
+            'namespace App\\PostTypes',
+            $postTypeClassContent,
+        );
+
+        $path = $this->getTemplatePath() . '/app/PostTypes/';
+        $filepath = $path . $structure['path'];
+
+        $result = CommandService::handleClassCreation(
+            type: AbstractPostType::class,
+            filepath: $filepath,
+            path: $path,
+            folders: $folders,
+            className: $className,
+            template: $postTypeClassContent,
+        );
+
+        if ($result === 'already_exists') {
+            $this->error(sprintf('Post-type controller already exists at %s', $filepath));
+        }
+    }
+
+    private function getTemplatePath(): ?string
+    {
+        if (function_exists('get_template_directory')) {
+            return get_template_directory();
+        }
+
+        return null;
     }
 }
