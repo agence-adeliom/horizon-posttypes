@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2a92394cd16323a67a0a108b726ab5d",
+    "content-hash": "c11476cba325cff439a75c0f39aa8d3f",
     "packages": [
         {
             "name": "agence-adeliom/horizon-tools",
-            "version": "dev-main",
+            "version": "dev-upgrade/sage-11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agence-adeliom/horizon-tools.git",
-                "reference": "7a4ce0f7c83f634b09bffa3e5cc718d9a9e3e712"
+                "reference": "fed27fb65be6bc32f6f458011d65619f9d382e99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agence-adeliom/horizon-tools/zipball/7a4ce0f7c83f634b09bffa3e5cc718d9a9e3e712",
-                "reference": "7a4ce0f7c83f634b09bffa3e5cc718d9a9e3e712",
+                "url": "https://api.github.com/repos/agence-adeliom/horizon-tools/zipball/fed27fb65be6bc32f6f458011d65619f9d382e99",
+                "reference": "fed27fb65be6bc32f6f458011d65619f9d382e99",
                 "shasum": ""
             },
             "require": {
@@ -25,10 +25,9 @@
                 "league/color-extractor": "^0.4.0",
                 "livewire/livewire": "^3.5",
                 "php": ">=8.2",
-                "roots/acorn": "^4.0",
+                "roots/acorn": "^4.0 || ^5.0",
                 "vinkla/extended-acf": "^14.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -46,10 +45,10 @@
             ],
             "description": "Tools for Sage WordPress Theme, made by the Adeliom Agency",
             "support": {
-                "source": "https://github.com/agence-adeliom/horizon-tools/tree/main",
+                "source": "https://github.com/agence-adeliom/horizon-tools/tree/upgrade/sage-11",
                 "issues": "https://github.com/agence-adeliom/horizon-tools/issues"
             },
-            "time": "2025-09-09T12:15:38+00:00"
+            "time": "2025-09-04T13:02:57+00:00"
         },
         {
             "name": "brick/math",
