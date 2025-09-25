@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b776734db9345837aad5f74c9104d182",
+    "content-hash": "74fdd8fadf99ba59a2c0590d1339d26e",
     "packages": [
         {
             "name": "agence-adeliom/horizon-tools",
