@@ -1,26 +1,26 @@
 {
-  "name": "agence-adeliom/horizon-posttypes",
-  "type": "library",
-  "autoload": {
-    "psr-4": {
-      "Adeliom\\HorizonPostTypes\\": "src/"
+    "name": "agence-adeliom/horizon-posttypes",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Adeliom\\HorizonPostTypes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Agence Adeliom",
+            "email": "dev@adeliom.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:agence-adeliom/horizon-tools.git"
+        }
+    ],
+    "require": {
+        "php": ">=8.4",
+        "agence-adeliom/horizon-tools": "dev-sage/10",
+        "laravel/prompts": "^0.1.25"
     }
-  },
-  "authors": [
-    {
-      "name": "Agence Adeliom",
-      "email": "dev@adeliom.com"
-    }
-  ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:agence-adeliom/horizon-tools.git"
-    }
-  ],
-  "require": {
-    "php": ">=8.4",
-    "agence-adeliom/horizon-tools": "dev-main",
-    "laravel/prompts": "^0.1.25"
-  }
 }
