@@ -74,14 +74,19 @@ class ImportPostType extends Command
         }
     }
 
-    private function createPostTypeControllerFile(
+    public function createPostTypeControllerFile(
         string $className,
         array $folders,
         string $pathToPostTypeControllerFile,
         array $structure,
+        ?Command $instance = null,
     ): void {
-        $this->newLine();
-        $this->info('Handling post-type controller...');
+        if (null === $instance) {
+            $instance = $this;
+        }
+
+        $instance->newLine();
+        $instance->info('Handling post-type controller...');
 
         $postTypeClassContent = file_get_contents($pathToPostTypeControllerFile);
         $postTypeClassContent = str_replace('Adeliom\\HorizonPostTypes\\PostTypes\\', 'App\\PostTypes\\', $postTypeClassContent);
@@ -91,7 +96,7 @@ class ImportPostType extends Command
             $postTypeClassContent,
         );
 
-        $path = $this->getTemplatePath() . '/app/PostTypes/';
+        $path = $instance->getTemplatePath() . '/app/PostTypes/';
         $filepath = $path . $structure['path'];
 
         $result = CommandService::handleClassCreation(
@@ -104,7 +109,7 @@ class ImportPostType extends Command
         );
 
         if ($result === 'already_exists') {
-            $this->error(sprintf('Post-type controller already exists at %s', $filepath));
+            $instance->error(sprintf('Post-type controller already exists at %s', $filepath));
         }
     }
 
