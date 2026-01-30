@@ -1,6 +1,8 @@
 {
     "name": "agence-adeliom/horizon-posttypes",
     "type": "library",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Adeliom\\HorizonPostTypes\\": "src/"
@@ -16,6 +18,10 @@
         {
             "type": "vcs",
             "url": "git@github.com:agence-adeliom/horizon-tools.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:agence-adeliom/horizon-querybuilder.git"
         }
     ],
     "require": {
