@@ -21,22 +21,22 @@ class FAQ extends AbstractPostType
     public function getConfig(array $config = []): array
     {
         $config['args'] = [
-            'label' => 'FAQ',
+            'label' => __('FAQ', 'horizon-posttypes'),
             'labels' => [
-                'name' => 'FAQ',
-                'singular_name' => 'FAQ',
-                'menu_name' => 'FAQ',
-                'add_new' => 'Ajouter une question',
-                'add_new_item' => 'Ajouter une nouvelle question',
-                'edit_item' => 'Modifier la question',
-                'new_item' => 'Nouvelle question',
-                'view_item' => 'Voir la question',
-                'view_items' => 'Voir les questions',
-                'search_items' => 'Rechercher une question',
-                'not_found' => 'Aucune question trouvée',
-                'not_found_in_trash' => 'Aucune question trouvée dans la corbeille',
-                'all_items' => 'Toutes les questions',
-                'archives' => 'Archives des questions',
+                'name' => __('FAQ', 'horizon-posttypes'),
+                'singular_name' => __('FAQ', 'horizon-posttypes'),
+                'menu_name' => __('FAQ', 'horizon-posttypes'),
+                'add_new' => __('Ajouter une question', 'horizon-posttypes'),
+                'add_new_item' => __('Ajouter une nouvelle question', 'horizon-posttypes'),
+                'edit_item' => __('Modifier la question', 'horizon-posttypes'),
+                'new_item' => __('Nouvelle question', 'horizon-posttypes'),
+                'view_item' => __('Voir la question', 'horizon-posttypes'),
+                'view_items' => __('Voir les questions', 'horizon-posttypes'),
+                'search_items' => __('Rechercher une question', 'horizon-posttypes'),
+                'not_found' => __('Aucune question trouvée', 'horizon-posttypes'),
+                'not_found_in_trash' => __('Aucune question trouvée dans la corbeille', 'horizon-posttypes'),
+                'all_items' => __('Toutes les questions', 'horizon-posttypes'),
+                'archives' => __('Archives des questions', 'horizon-posttypes'),
             ],
             'menu_icon' => 'dashicons-format-status',
             'supports' => ['title'],
@@ -49,7 +49,7 @@ class FAQ extends AbstractPostType
 
     public function getFieldsTitle(): string
     {
-        return __('Question');
+        return __('Question', 'horizon-posttypes');
     }
 
     public function getStyle(): string
@@ -59,7 +59,7 @@ class FAQ extends AbstractPostType
 
     public function getFields(): ?iterable
     {
-        yield Text::make('Intitulé de la question', self::FIELD_QUESTION)->required();
-        yield WysiwygField::minimal('Réponse de la question', self::FIELD_ANSWER)->required();
+        yield Text::make(__('Intitulé de la question', 'horizon-posttypes'), self::FIELD_QUESTION)->required();
+        yield WysiwygField::minimal(__('Réponse de la question', 'horizon-posttypes'), self::FIELD_ANSWER)->required();
     }
 }
