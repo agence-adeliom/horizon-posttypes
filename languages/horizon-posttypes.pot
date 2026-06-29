@@ -1,0 +1,222 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-29T08:12:28+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: horizon-posttypes\n"
+
+#: PostTypes/CustomerReview.php:35
+#: PostTypes/CustomerReview.php:37
+#: PostTypes/CustomerReview.php:38
+#: PostTypes/CustomerReview.php:39
+#: PostTypes/CustomerReview.php:75
+msgid "Avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:40
+msgid "Ajouter un avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:41
+msgid "Ajouter un nouvel avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:42
+msgid "Modifier l’avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:43
+msgid "Nouvel avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:44
+msgid "Voir l’avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:45
+msgid "Voir les avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:46
+msgid "Rechercher un avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:47
+msgid "Aucun avis trouvé"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:48
+msgid "Aucun avis trouvé dans la corbeille"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:49
+msgid "Tous les avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:50
+msgid "Archives des avis"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:68
+msgid "Avis client"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:69
+msgid "Note"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:70
+msgid "Note attribuée à l'avis entre 0 et 5, par pas de 0.5"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:78
+msgid "Information client"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:79
+msgid "Nom"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:80
+msgid "Prénom"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:81
+msgid "Fonction"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:82
+msgid "Photo"
+msgstr ""
+
+#: PostTypes/CustomerReview.php:83
+msgid "Si aucune photo n'est renseignée, les initiales du nom et prénom seront affichées."
+msgstr ""
+
+#: PostTypes/FAQ.php:24
+#: PostTypes/FAQ.php:26
+#: PostTypes/FAQ.php:27
+#: PostTypes/FAQ.php:28
+msgid "FAQ"
+msgstr ""
+
+#: PostTypes/FAQ.php:29
+msgid "Ajouter une question"
+msgstr ""
+
+#: PostTypes/FAQ.php:30
+msgid "Ajouter une nouvelle question"
+msgstr ""
+
+#: PostTypes/FAQ.php:31
+msgid "Modifier la question"
+msgstr ""
+
+#: PostTypes/FAQ.php:32
+msgid "Nouvelle question"
+msgstr ""
+
+#: PostTypes/FAQ.php:33
+msgid "Voir la question"
+msgstr ""
+
+#: PostTypes/FAQ.php:34
+msgid "Voir les questions"
+msgstr ""
+
+#: PostTypes/FAQ.php:35
+msgid "Rechercher une question"
+msgstr ""
+
+#: PostTypes/FAQ.php:36
+msgid "Aucune question trouvée"
+msgstr ""
+
+#: PostTypes/FAQ.php:37
+msgid "Aucune question trouvée dans la corbeille"
+msgstr ""
+
+#: PostTypes/FAQ.php:38
+msgid "Toutes les questions"
+msgstr ""
+
+#: PostTypes/FAQ.php:39
+msgid "Archives des questions"
+msgstr ""
+
+#: PostTypes/FAQ.php:52
+msgid "Question"
+msgstr ""
+
+#: PostTypes/FAQ.php:62
+msgid "Intitulé de la question"
+msgstr ""
+
+#: PostTypes/FAQ.php:63
+msgid "Réponse de la question"
+msgstr ""
+
+#: PostTypes/LandingPage.php:22
+msgid "LandingPage"
+msgstr ""
+
+#: PostTypes/LandingPage.php:24
+#: PostTypes/LandingPage.php:25
+#: PostTypes/LandingPage.php:26
+msgid "Landing page"
+msgstr ""
+
+#: PostTypes/LandingPage.php:27
+msgid "Ajouter un élément"
+msgstr ""
+
+#: PostTypes/LandingPage.php:28
+msgid "Ajouter un nouvel élément"
+msgstr ""
+
+#: PostTypes/LandingPage.php:29
+msgid "Modifier l’élément"
+msgstr ""
+
+#: PostTypes/LandingPage.php:30
+msgid "Nouvel élément"
+msgstr ""
+
+#: PostTypes/LandingPage.php:31
+msgid "Voir l’élément"
+msgstr ""
+
+#: PostTypes/LandingPage.php:32
+msgid "Voir les éléments"
+msgstr ""
+
+#: PostTypes/LandingPage.php:33
+msgid "Rechercher un élément"
+msgstr ""
+
+#: PostTypes/LandingPage.php:34
+msgid "Aucun élément trouvé"
+msgstr ""
+
+#: PostTypes/LandingPage.php:35
+msgid "Aucun élément trouvé dans la corbeille"
+msgstr ""
+
+#: PostTypes/LandingPage.php:36
+msgid "Tous les éléments"
+msgstr ""
+
+#: PostTypes/LandingPage.php:37
+msgid "Archives des éléments"
+msgstr ""
+
+#: PostTypes/LandingPage.php:49
+msgid "Bouton principal"
+msgstr ""
