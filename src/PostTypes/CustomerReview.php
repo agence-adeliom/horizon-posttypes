@@ -32,22 +32,22 @@ class CustomerReview extends AbstractPostType
     public function getConfig(array $config = []): array
     {
         $config['args'] = [
-            'label' => 'Avis',
+            'label' => __('Avis', 'horizon-posttypes'),
             'labels' => [
-                'name' => 'Avis',
-                'singular_name' => 'Avis',
-                'menu_name' => 'Avis',
-                'add_new' => 'Ajouter un avis',
-                'add_new_item' => 'Ajouter un nouvel avis',
-                'edit_item' => 'Modifier l’avis',
-                'new_item' => 'Nouvel avis',
-                'view_item' => 'Voir l’avis',
-                'view_items' => 'Voir les avis',
-                'search_items' => 'Rechercher un avis',
-                'not_found' => 'Aucun avis trouvé',
-                'not_found_in_trash' => 'Aucun avis trouvé dans la corbeille',
-                'all_items' => 'Tous les avis',
-                'archives' => 'Archives des avis',
+                'name' => __('Avis', 'horizon-posttypes'),
+                'singular_name' => __('Avis', 'horizon-posttypes'),
+                'menu_name' => __('Avis', 'horizon-posttypes'),
+                'add_new' => __('Ajouter un avis', 'horizon-posttypes'),
+                'add_new_item' => __('Ajouter un nouvel avis', 'horizon-posttypes'),
+                'edit_item' => __('Modifier l’avis', 'horizon-posttypes'),
+                'new_item' => __('Nouvel avis', 'horizon-posttypes'),
+                'view_item' => __('Voir l’avis', 'horizon-posttypes'),
+                'view_items' => __('Voir les avis', 'horizon-posttypes'),
+                'search_items' => __('Rechercher un avis', 'horizon-posttypes'),
+                'not_found' => __('Aucun avis trouvé', 'horizon-posttypes'),
+                'not_found_in_trash' => __('Aucun avis trouvé dans la corbeille', 'horizon-posttypes'),
+                'all_items' => __('Tous les avis', 'horizon-posttypes'),
+                'archives' => __('Archives des avis', 'horizon-posttypes'),
             ],
             'menu_icon' => 'dashicons-star-filled',
             'supports' => ['title'],
@@ -65,22 +65,22 @@ class CustomerReview extends AbstractPostType
 
     public function getFields(): ?iterable
     {
-        yield Group::make('Avis client', self::FIELD_REVIEW)->fields([
-            Number::make('Note', self::FIELD_RATING)
-                ->helperText("Note attribuée à l'avis entre 0 et 5, par pas de 0.5")
+        yield Group::make(__('Avis client', 'horizon-posttypes'), self::FIELD_REVIEW)->fields([
+            Number::make(__('Note', 'horizon-posttypes'), self::FIELD_RATING)
+                ->helperText(__("Note attribuée à l'avis entre 0 et 5, par pas de 0.5", 'horizon-posttypes'))
                 ->min(0)
                 ->max(5)
                 ->step(0.5)
                 ->required(),
-            Text::make('Avis', self::FIELD_REVIEW)->required(),
+            Text::make(__('Avis', 'horizon-posttypes'), self::FIELD_REVIEW)->required(),
         ]);
 
-        yield Group::make('Information client', self::FIELD_REVIEWER)->fields([
-            Text::make('Nom', self::FIELD_LASTNAME)->required(),
-            Text::make('Prénom', self::FIELD_FIRSTNAME)->required(),
-            Text::make('Fonction', self::FIELD_JOB)->required(),
-            Image::make('Photo', self::FIELD_AVATAR)->helperText(
-                "Si aucune photo n'est renseignée, les initiales du nom et prénom seront affichées.",
+        yield Group::make(__('Information client', 'horizon-posttypes'), self::FIELD_REVIEWER)->fields([
+            Text::make(__('Nom', 'horizon-posttypes'), self::FIELD_LASTNAME)->required(),
+            Text::make(__('Prénom', 'horizon-posttypes'), self::FIELD_FIRSTNAME)->required(),
+            Text::make(__('Fonction', 'horizon-posttypes'), self::FIELD_JOB)->required(),
+            Image::make(__('Photo', 'horizon-posttypes'), self::FIELD_AVATAR)->helperText(
+                __("Si aucune photo n'est renseignée, les initiales du nom et prénom seront affichées.", 'horizon-posttypes'),
             ),
         ]);
     }

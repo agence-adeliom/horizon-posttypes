@@ -19,22 +19,22 @@ class LandingPage extends AbstractPostType
     public function getConfig(array $config = []): array
     {
         $config['args'] = [
-            'label' => 'LandingPage',
+            'label' => __('LandingPage', 'horizon-posttypes'),
             'labels' => [
-                'name' => 'Landing page',
-                'singular_name' => 'Landing page',
-                'menu_name' => 'Landing page',
-                'add_new' => 'Ajouter un élément',
-                'add_new_item' => 'Ajouter un nouvel élément',
-                'edit_item' => 'Modifier l’élément',
-                'new_item' => 'Nouvel élément',
-                'view_item' => 'Voir l’élément',
-                'view_items' => 'Voir les éléments',
-                'search_items' => 'Rechercher un élément',
-                'not_found' => 'Aucun élément trouvé',
-                'not_found_in_trash' => 'Aucun élément trouvé dans la corbeille',
-                'all_items' => 'Tous les éléments',
-                'archives' => 'Archives des éléments',
+                'name' => __('Landing page', 'horizon-posttypes'),
+                'singular_name' => __('Landing page', 'horizon-posttypes'),
+                'menu_name' => __('Landing page', 'horizon-posttypes'),
+                'add_new' => __('Ajouter un élément', 'horizon-posttypes'),
+                'add_new_item' => __('Ajouter un nouvel élément', 'horizon-posttypes'),
+                'edit_item' => __('Modifier l’élément', 'horizon-posttypes'),
+                'new_item' => __('Nouvel élément', 'horizon-posttypes'),
+                'view_item' => __('Voir l’élément', 'horizon-posttypes'),
+                'view_items' => __('Voir les éléments', 'horizon-posttypes'),
+                'search_items' => __('Rechercher un élément', 'horizon-posttypes'),
+                'not_found' => __('Aucun élément trouvé', 'horizon-posttypes'),
+                'not_found_in_trash' => __('Aucun élément trouvé dans la corbeille', 'horizon-posttypes'),
+                'all_items' => __('Tous les éléments', 'horizon-posttypes'),
+                'archives' => __('Archives des éléments', 'horizon-posttypes'),
             ],
             'menu_icon' => 'dashicons-admin-post',
             'supports' => ['title', 'editor'],
@@ -46,7 +46,7 @@ class LandingPage extends AbstractPostType
 
     public function getFields(): ?iterable
     {
-        yield ButtonField::make('Bouton principal', self::BTN_HIGHLIGHT);
+        yield ButtonField::make(__('Bouton principal', 'horizon-posttypes'), self::BTN_HIGHLIGHT);
     }
 
     public function getPosition(): string
