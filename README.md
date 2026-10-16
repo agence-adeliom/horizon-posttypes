@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo/horizon-post-types-horizontal-negatif.svg">
+    <img src="docs/logo/horizon-post-types-horizontal-couleur.svg" alt="Horizon PostTypes" width="420">
+  </picture>
+</p>
+
 # Horizon PostTypes
 
 Horizon PostTypes is a powerful library designed to integrate seamlessly with Horizon Tools, allowing you to create, manage, and reuse custom post types across multiple WordPress sites with ease.
